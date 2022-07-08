@@ -1,0 +1,41 @@
+[
+  {
+    "name": "user A",
+    "profilePicUrl": "assets/user-icon.png",
+    "age": 100,
+    "bio": "I like programming",
+    "birthday": "September 1",
+    "interests": [
+      "Programming",
+      "sleeping",
+      "Basketball",
+      "reading"
+    ]
+  },
+  {
+    "name": "user B",
+    "profilePicUrl": "assets/user-icon.png",
+    "age": 100,
+    "bio": "I like programming",
+    "birthday": "September 1",
+    "interests": [
+      "Programming",
+      "sleeping",
+      "Basketball",
+      "reading"
+    ]
+  },
+  {
+    "name": "user C",
+    "profilePicUrl": "assets/user-icon.png",
+    "age": 100,
+    "bio": "I like programming",
+    "birthday": "September 1",
+    "interests": [
+      "Programming",
+      "sleeping",
+      "Basketball",
+      "reading"
+    ]
+  }
+]
