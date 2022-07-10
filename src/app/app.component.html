@@ -1,2 +1,13 @@
 <h1>Friend Tracker</h1>
-<app-profile-info [person]="myPerson"></app-profile-info>
+<div class="content-container">
+  <p>shouldShowWelcomeMessage: {{shouldShowWelcomeMessage}}</p>
+  <app-welcome-message
+    (hide)="hideWelcomeMessage()"
+    [isHidden]="!shouldShowWelcomeMessage"
+    [name]="myPerson.name"></app-welcome-message>
+
+  <app-profile-info [person]="myPerson"></app-profile-info>
+  <h2>MY FRIENDS</h2>
+  <p>You have {{favoriteIds.length}} friends</p>
+  <app-people-list [people]="friends"></app-people-list>
+</div>

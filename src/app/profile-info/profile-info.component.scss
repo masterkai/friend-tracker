@@ -1,0 +1,37 @@
+h3 {
+  border-bottom: 1px dotted #ccc;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-wrap {
+    width: 128px;
+    height: 128px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #000;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.container {
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 100px;
+  //box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+}

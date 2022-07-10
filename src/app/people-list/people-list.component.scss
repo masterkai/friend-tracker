@@ -1,0 +1,10 @@
+.people-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.people-list-item {
+  box-sizing: border-box;
+  padding: 8px;
+  width: 50%;
+}

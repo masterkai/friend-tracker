@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Person } from '../../types';
 
 @Component({
@@ -8,6 +8,7 @@ import { Person } from '../../types';
 })
 export class ProfileInfoComponent implements OnInit {
   @Input() person: Person = {
+    id: '',
     name: '',
     profilePicUrl: '',
     age: 0,

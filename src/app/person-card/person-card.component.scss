@@ -1,0 +1,47 @@
+.profile-pic {
+  width: 100%;
+
+  &-left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+
+  &-wrap {
+    width: 128px;
+    height: 128px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #777;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.profile-detail {
+  flex: 1;
+  padding-left: 12px;
+}
+
+.card {
+  display: flex;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.card-favorite {
+  display: flex;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #777777;
+  background-color: #44ff00;
+  cursor: pointer;
+  padding: 20px;
+}
