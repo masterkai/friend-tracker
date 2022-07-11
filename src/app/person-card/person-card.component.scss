@@ -26,12 +26,16 @@
 }
 
 .card {
+  &-container {
+    display: flex;
+  }
+
   display: flex;
+  flex-direction: column;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  cursor: pointer;
   padding: 20px;
 }
 

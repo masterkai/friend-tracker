@@ -8,8 +8,17 @@ import { Person } from '../../types';
 })
 export class PeopleListComponent implements OnInit {
   @Input() people!: Person[];
+  @Input() cardButtonName: string = '';
 
   constructor() {}
 
+  // @Output() clickPerson = new EventEmitter<string>();
+
+  @Input() clickPersonFn: (personId: string) => void = () => {};
+
   ngOnInit(): void {}
+
+  // peopleClick(peopleId: string) {
+  //   this.clickPerson.emit(peopleId);
+  // }
 }

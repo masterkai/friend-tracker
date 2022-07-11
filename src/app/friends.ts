@@ -1,3 +1,12 @@
+export const myProfileData = {
+  id: '123',
+  name: 'user A',
+  profilePicUrl: 'assets/user-icon.png',
+  age: 100,
+  bio: 'I like programming',
+  birthday: 'September 1',
+  interests: ['Programming', 'sleeping', 'Basketball', 'reading'],
+};
 export const friends = [
   {
     id: '234',

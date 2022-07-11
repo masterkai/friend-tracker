@@ -18,5 +18,9 @@
   <h3>Birthday</h3>
   <p>{{person.birthday}}</p>
   <h3>Interests</h3>
-  <p>{{person.interests.join(', ')}}</p>
+  <div class="profile-interests">
+    <div class="clip" *ngFor="let interest of person.interests">
+      {{interest}}
+    </div>
+  </div>
 </div>

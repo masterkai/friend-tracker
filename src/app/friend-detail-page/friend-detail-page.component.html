@@ -1,0 +1,5 @@
+<app-profile-info *ngIf="selectedFriend" [person]="selectedFriend"></app-profile-info>
+<div *ngIf="!selectedFriend">
+  <h1>Looks like that friend doesn't exist or was deleted</h1>
+  <p>You'll be redirected back to the Home Page shortly...</p>
+</div>

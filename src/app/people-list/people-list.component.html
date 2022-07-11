@@ -1,6 +1,8 @@
 <div class="people-list">
   <div *ngFor="let friend of people" class="people-list-item">
     <app-person-card
-      [person]="friend"></app-person-card>
+      [buttonName]="cardButtonName"
+      [person]="friend"
+      [selectFn]="clickPersonFn"></app-person-card>
   </div>
 </div>

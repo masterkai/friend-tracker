@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Person } from '../../types';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-person-card',
@@ -8,13 +9,22 @@ import { Person } from '../../types';
 })
 export class PersonCardComponent implements OnInit {
   @Input() person!: Person;
-  @Output() select = new EventEmitter<string>();
+  @Input() buttonName: string = '';
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  // @Output() select = new EventEmitter<string>();
+
+  @Input() selectFn: (personId: string) => void = () => {};
 
   ngOnInit(): void {}
 
   cardClicked(): void {
-    this.select.emit(this.person.id);
+    // this.select.emit(this.person.id);
+    this.selectFn(this.person.id);
+  }
+
+  gotoPersonDetail() {
+    this.router.navigateByUrl(`/friends/${this.person.id}`);
   }
 }

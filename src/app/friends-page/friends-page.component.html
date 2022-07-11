@@ -1,0 +1,29 @@
+<div class="content-container">
+  <p>shouldShowWelcomeMessage: {{shouldShowWelcomeMessage}}</p>
+  <app-welcome-message
+    (hide)="hideWelcomeMessage()"
+    [isHidden]="!shouldShowWelcomeMessage"
+    [name]="myProfile.name">
+  </app-welcome-message>
+  <!--  <h2>Friend of The Month</h2>-->
+  <!--  <app-person-card-->
+  <!--    [person]="friends[0]"-->
+  <!--    [selectFn]="gotoFriendDetail"-->
+  <!--  ></app-person-card>-->
+  <h2>MY FRIENDS</h2>
+  <div>
+    <p>You have {{favoriteIds.length}} favorites</p>
+    <h2>favorites</h2>
+    <app-people-list
+      [cardButtonName]="'Remove From Favorites'"
+      [clickPersonFn]="removeFavorite"
+      [people]="favorites"></app-people-list>
+  </div>
+  <div>
+    <h2>friends</h2>
+    <app-people-list
+      [cardButtonName]="'Add To Favorites'"
+      [clickPersonFn]="addFavorite"
+      [people]="nonFavorites"></app-people-list>
+  </div>
+</div>

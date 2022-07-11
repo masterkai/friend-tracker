@@ -35,3 +35,20 @@ h2 {
   margin-bottom: 100px;
   //box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
 }
+
+.profile-interests {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.clip {
+  margin-right: 8px;
+  color: white;
+  background-color: #777777;
+  padding: 4px 16px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  width: auto;
+}
