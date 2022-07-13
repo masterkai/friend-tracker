@@ -26,6 +26,7 @@ export class FriendsPageComponent implements OnInit {
 
   set shouldShowWelcomeMessage(newValue) {
     localStorage.setItem(WELCOME_MESSAGE_KEY_NAME, JSON.stringify(newValue));
+    // setCookie(WELCOME_MESSAGE_KEY_NAME, JSON.stringify(!newValue), 10);
     this._shouldShowWelcomeMessage = newValue;
   }
 
@@ -37,6 +38,8 @@ export class FriendsPageComponent implements OnInit {
 
   set favoriteIds(newFavoritesIds) {
     localStorage.setItem(FAVORITES_IDS_KEY, JSON.stringify(newFavoritesIds));
+    // setCookie(FAVORITES_IDS_KEY, JSON.stringify(newFavoritesIds), 10);
+
     this._favoriteIds = newFavoritesIds;
   }
 
@@ -56,10 +59,15 @@ export class FriendsPageComponent implements OnInit {
     const existingFavoritesIds = JSON.parse(
       localStorage.getItem(FAVORITES_IDS_KEY) || '[]'
     );
+    // const existingFavoritesIds = JSON.parse(
+    //   getCookie(FAVORITES_IDS_KEY) || '[]'
+    // );
     this._favoriteIds = existingFavoritesIds;
 
     const isHidden = localStorage.getItem(WELCOME_MESSAGE_KEY_NAME);
     this._shouldShowWelcomeMessage = isHidden !== 'false';
+    // const isHidden = getCookie(WELCOME_MESSAGE_KEY_NAME);
+    // this._shouldShowWelcomeMessage = !isHidden;
   }
 
   hideWelcomeMessage(): void {

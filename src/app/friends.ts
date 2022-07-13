@@ -24,7 +24,7 @@ export const friends = [
     age: 50,
     bio: 'I like programming',
     birthday: 'September 1',
-    interests: ['Programming', 'sleeping', 'Basketball', 'reading'],
+    interests: ['Programming', 'sleeping', 'Dreaming', 'reading'],
   },
   {
     id: '456',
@@ -33,6 +33,6 @@ export const friends = [
     age: 60,
     bio: 'I like programming',
     birthday: 'September 1',
-    interests: ['Programming', 'sleeping', 'Basketball', 'reading'],
+    interests: ['Programming', 'sleeping', 'Singing', 'reading'],
   },
 ];
