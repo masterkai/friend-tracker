@@ -16,6 +16,6 @@ export class NotFoundPageComponent implements OnInit {
   }
 
   gotoHomePage(): void {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/friends');
   }
 }

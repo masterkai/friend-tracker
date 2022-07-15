@@ -1,5 +1,21 @@
-<app-profile-info *ngIf="selectedFriend" [person]="selectedFriend"></app-profile-info>
-<div *ngIf="!selectedFriend">
-  <h1>Looks like that friend doesn't exist or was deleted</h1>
-  <p>You'll be redirected back to the Home Page shortly...</p>
+<div *ngIf="selectedFriend">
+  <app-profile-info
+    *ngIf="selectedFriend"
+    [person]="selectedFriend">
+  </app-profile-info>
+  <button
+    (click)="removeFavorite()"
+    *ngIf="favoriteIds.includes(selectedFriend.id)"
+    class="action-button">Remove from Favorites
+  </button>
+  <button
+    (click)="addFavorite()"
+    *ngIf="!favoriteIds.includes(selectedFriend.id)"
+    class="action-button">Add to Favorites
+  </button>
+  <div *ngIf="!selectedFriend">
+    <h1>Looks like that friend doesn't exist or was deleted</h1>
+    <p>You'll be redirected back to the Home Page shortly...</p>
+  </div>
 </div>
+

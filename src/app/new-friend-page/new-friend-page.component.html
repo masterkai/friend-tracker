@@ -1,0 +1,54 @@
+<h1>Add a New Friend</h1>
+<p>{{name}}</p>
+<div class="info-form">
+  <label for="name">Name</label>
+  <input
+    (input)="nameChanged($event)"
+    [value]="name"
+    id="name"
+    name="name"
+    placeholder="John Doe"
+    type="text"/>
+  <label for="age">Age</label>
+  <input
+    (input)="ageChanged($event)"
+    [value]="age"
+    id="age"
+    name="age"
+    placeholder="12"
+    type="number"/>
+  <label for="profilePicUrl">Profile Picture Url</label>
+  <input
+    (input)="profilePicUrlChanged($event)"
+    [value]="profilePicUrl"
+    id="profilePicUrl"
+    name="profilePicUrl"
+    placeholder="https://www.istockphoto.com/stock-photos"
+    type="text"/>
+  <label for="bio">Bio</label>
+  <textarea
+    (input)="bioChanged($event)"
+    [value]="bio"
+    id="bio"
+    name="bio"
+    placeholder="we first met ..."
+  ></textarea>
+  <label for="birthday">Birthday</label>
+  <input
+    (input)="birthdayChanged($event)"
+    [value]="birthday"
+    id="birthday"
+    name="birthday"
+    placeholder="i.e. March 1"
+    type="text"/>
+  <label for="interests">Interests (Enter as a comma-separated string)</label>
+  <input
+    (input)="interestsChanged($event)"
+    [value]="interests"
+    id="interests"
+    name="interests"
+    placeholder="Basket ball, Movie, Travel"
+    type="text"/>
+  <button (click)="createFriend()">Create Friend</button>
+</div>
+

@@ -12,9 +12,11 @@ import { UserProfilePageComponent } from './user-profile-page/user-profile-page.
 import { FriendDetailPageComponent } from './friend-detail-page/friend-detail-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { NewFriendCardComponent } from './new-friend-card/new-friend-card.component';
+import { NewFriendPageComponent } from './new-friend-page/new-friend-page.component';
 
 @NgModule({
-  declarations: [AppComponent, ProfileInfoComponent, PersonCardComponent, WelcomeMessageComponent, PeopleListComponent, FriendsPageComponent, UserProfilePageComponent, FriendDetailPageComponent, NavBarComponent, NotFoundPageComponent],
+  declarations: [AppComponent, ProfileInfoComponent, PersonCardComponent, WelcomeMessageComponent, PeopleListComponent, FriendsPageComponent, UserProfilePageComponent, FriendDetailPageComponent, NavBarComponent, NotFoundPageComponent, NewFriendCardComponent, NewFriendPageComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

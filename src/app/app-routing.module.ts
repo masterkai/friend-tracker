@@ -5,6 +5,7 @@ import { FriendsPageComponent } from './friends-page/friends-page.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 import { FriendDetailPageComponent } from './friend-detail-page/friend-detail-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { NewFriendPageComponent } from './new-friend-page/new-friend-page.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'friends',
     component: FriendsPageComponent,
+  },
+  {
+    path: 'new-friend',
+    component: NewFriendPageComponent,
   },
   {
     path: 'user-profile',

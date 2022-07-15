@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../../types';
-import { friends, myProfileData } from '../friends';
+import { myProfileData } from '../friends';
 import { Router } from '@angular/router';
 import {
   FAVORITES_IDS_KEY,
+  FRIENDS_KEY,
   WELCOME_MESSAGE_KEY_NAME,
 } from '../storageKeyNames';
 
@@ -14,7 +15,7 @@ import {
 })
 export class FriendsPageComponent implements OnInit {
   myProfile: Person = myProfileData;
-  friends: Person[] = friends;
+  allFriends: Person[] = [];
 
   constructor(private router: Router) {}
 
@@ -45,12 +46,12 @@ export class FriendsPageComponent implements OnInit {
 
   get favorites(): Person[] {
     return this.favoriteIds.map(
-      (id) => this.friends.find((friend) => id === friend.id)!
+      (id) => this.allFriends.find((friend) => id === friend.id)!
     );
   }
 
   get nonFavorites(): Person[] {
-    return this.friends.filter(
+    return this.allFriends.filter(
       (friend) => !this.favoriteIds.includes(friend.id)
     );
   }
@@ -68,6 +69,10 @@ export class FriendsPageComponent implements OnInit {
     this._shouldShowWelcomeMessage = isHidden !== 'false';
     // const isHidden = getCookie(WELCOME_MESSAGE_KEY_NAME);
     // this._shouldShowWelcomeMessage = !isHidden;
+    const existingFriends = JSON.parse(
+      localStorage.getItem(FRIENDS_KEY) || '[]'
+    );
+    this.allFriends = existingFriends;
   }
 
   hideWelcomeMessage(): void {
@@ -82,7 +87,7 @@ export class FriendsPageComponent implements OnInit {
     this.favoriteIds = this.favoriteIds.filter((id) => id !== friendId);
   };
 
-  gotoFriendDetail = (friendId: string): void => {
-    this.router.navigateByUrl(`/friends/${friendId}`);
-  };
+  // gotoFriendDetail = (friendId: string): void => {
+  //   this.router.navigateByUrl(`/friends/${friendId}`);
+  // };
 }
