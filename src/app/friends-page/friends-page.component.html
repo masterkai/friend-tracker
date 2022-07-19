@@ -5,11 +5,7 @@
     [isHidden]="!shouldShowWelcomeMessage"
     [name]="myProfile.name">
   </app-welcome-message>
-  <!--  <h2>Friend of The Month</h2>-->
-  <!--  <app-person-card-->
-  <!--    [person]="friends[0]"-->
-  <!--    [selectFn]="gotoFriendDetail"-->
-  <!--  ></app-person-card>-->
+
   <h2>MY FRIENDS</h2>
   <div>
     <p>You have {{favoriteIds.length}} favorites</p>
@@ -25,5 +21,8 @@
       [cardButtonName]="'Add To Favorites'"
       [clickPersonFn]="addFavorite"
       [people]="nonFavorites"></app-people-list>
+  </div>
+  <div>
+    <app-new-friend-card></app-new-friend-card>
   </div>
 </div>

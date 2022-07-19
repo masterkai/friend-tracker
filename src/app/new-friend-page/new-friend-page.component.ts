@@ -20,36 +20,6 @@ export class NewFriendPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  nameChanged(evt: any): void {
-    console.log(evt.target.value);
-    this.name = evt.target.value;
-  }
-
-  ageChanged(evt: any): void {
-    console.log(evt.target.value);
-    this.age = evt.target.value;
-  }
-
-  bioChanged(evt: any): void {
-    console.log(evt.target.value);
-    this.bio = evt.target.value;
-  }
-
-  profilePicUrlChanged(evt: any): void {
-    console.log(evt.target.value);
-    this.profilePicUrl = evt.target.value;
-  }
-
-  birthdayChanged(evt: any): void {
-    console.log(evt.target.value);
-    this.birthday = evt.target.value;
-  }
-
-  interestsChanged(evt: any): void {
-    console.log(evt.target.value);
-    this.interests = evt.target.value;
-  }
-
   createFriend(): void {
     const newFriend = {
       id: uuid(),

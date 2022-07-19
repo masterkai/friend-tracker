@@ -1,0 +1,21 @@
+input, textarea {
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+  }
+
+  width: 100%;
+  padding: 12px;
+  border-radius: 0.25rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  border: 1px solid #ced4da;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+label {
+  margin-bottom: 4px;
+}

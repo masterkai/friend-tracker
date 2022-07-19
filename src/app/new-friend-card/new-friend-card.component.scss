@@ -1,0 +1,26 @@
+.add-friend-card {
+  max-width: 50%;
+
+
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px;
+
+  .container {
+    width: 334px;
+    height: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #cccccc solid 1px;
+    border-radius: 0.25rem;
+  }
+
+  .plus {
+    margin: auto;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+  }
+}
